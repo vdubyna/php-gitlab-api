@@ -49,6 +49,8 @@ class MergeRequests extends AbstractApi
         $resolver->setDefined('state')
             ->setAllowedValues('state', ['all', 'opened', 'merged', 'closed'])
         ;
+        $resolver->setDefined('source_branch');
+        $resolver->setDefined('target_branch');
         $resolver->setDefined('order_by')
             ->setAllowedValues('order_by', ['created_at', 'updated_at'])
         ;
